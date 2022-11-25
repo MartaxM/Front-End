@@ -1,0 +1,24 @@
+{
+  "name": "front-end",
+  "version": "1.0.0",
+  "description": "Responsive website project",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive",
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MartaxM/Front-End.git"
+  },
+  "author": "Marta X. Moraga Hernández",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MartaxM/Front-End/issues"
+  },
+  "homepage": "https://MartaxM.github.io/Front-End",
+  "dependencies": {
+    "gh-pages": "^4.0.0",
+    "node-sass": "^8.0.0"
+  }
+}
