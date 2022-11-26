@@ -25,7 +25,8 @@
   top: 0;
   width: 100%;
   opacity: 0.9;
-  visibility: hidden; }
+  visibility: hidden;
+  z-index: 4; }
   .menu.show {
     visibility: visible; }
   .menu-nav {
@@ -130,40 +131,16 @@ h2,
 h3 {
   margin: 0;
   font-weight: 400; }
-  h1.lg-heading,
-  h2.lg-heading,
-  h3.lg-heading {
-    font-size: 6rem; }
-  h1.sm-heading,
-  h2.sm-heading,
-  h3.sm-heading {
-    margin-bottom: 2rem;
-    padding: 0.2rem 1rem;
-    background: rgba(17, 11, 69, 0.5); }
 
 a {
   color: white;
   text-decoration: none; }
 
-header {
-  position: fixed;
-  z-index: 1;
-  width: 100%; }
-
 .text-secondary {
   color: #009f9d; }
 
-.btn {
-  display: block;
-  padding: 0.5rem 1rem;
-  border: 0;
-  margin-bottom: 0.3rem; }
-  .btn:hover {
-    background: #07456f;
-    color: white; }
-
 main {
-  padding: 4rem;
+  margin: 0;
   min-height: calc(100vh - 60px);
   z-index: -1; }
   main#exhibition {
@@ -176,10 +153,16 @@ main {
     line-height: 1.8em;
     color: black; }
   main#tickets {
-    padding-top: 8rem;
+    margin-top: 6rem;
     background: rgba(5, 54, 87, 0.6);
     height: 100%;
-    margin-top: 0;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.8em;
+    color: white; }
+  main#faqs-page {
+    margin: 6rem;
+    height: 100%;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.8em;
@@ -255,6 +238,7 @@ main {
     padding: 20px; }
 
 .tickets-info {
+  z-index: -1;
   display: grid;
   grid-gap: 30px;
   grid-template-areas: 'timetable prices';
@@ -265,7 +249,8 @@ main {
   padding-bottom: 5rem; }
   .tickets-info h1 {
     background-color: rgba(0, 159, 157, 0.6);
-    color: white; }
+    color: white;
+    padding: 1rem; }
   .tickets-info div {
     margin: auto; }
   .tickets-info table {
@@ -283,6 +268,25 @@ main {
       display: inline-block; }
   .tickets-info .timetable {
     grid-area: timetable; }
+
+.faqs {
+  z-index: -1;
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas: 'item1 item2 item3' 'item4 item5 item6';
+  grid-template-columns: repeat(3, 1fr); }
+  .faqs .faqs.item {
+    background-color: rgba(7, 69, 111, 0.9); }
+  .faqs .item1 {
+    grid-area: item1; }
+  .faqs .item2 {
+    grid-area: item2; }
+  .faqs .item3 {
+    grid-area: item3; }
+  .faqs .item4 {
+    grid-area: item4; }
+  .faqs .item5 {
+    grid-area: item5; }
 
 #main-footer {
   bottom: 0;
@@ -310,16 +314,16 @@ main {
   .home-info .img {
     width: 100%; }
   .home-info .text {
-    width: 100%; } }
+    width: 100%; }
+  .faqs {
+    grid-template-areas: 'item1 item2' 'item3 item4' 'item5 item6';
+    grid-template-columns: repeat(2, 1fr); } }
 
 @media screen and (max-width: 768px) {
   main {
     align-items: center;
     text-align: center;
-    padding: 2rem; }
-    main .lg-heading {
-      line-height: 1;
-      margin-bottom: 1rem; }
+    margin: 2rem; }
   ul.menu-nav {
     float: right;
     width: 50%;
@@ -342,12 +346,18 @@ main {
     padding-top: 6rem; }
   .tickets-info {
     grid-template-areas: 'timetable' 'prices';
+    grid-template-columns: 1fr; }
+  .faqs {
+    padding: 0;
+    grid-template-areas: 'item1' 'item2' 'item3' 'item4' 'item5' 'item6';
     grid-template-columns: 1fr; } }
 
 @media screen and (max-width: 500px) {
   main {
     padding: 0.5rem; }
   main#tickets {
+    padding: 0; }
+  main#faqs-page {
     padding: 0; }
   ul.menu-nav {
     float: right;

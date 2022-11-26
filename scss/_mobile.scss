@@ -31,6 +31,14 @@
             width: 100%;
         }
     }
+
+    .faqs {
+        grid-template-areas:
+            'item1 item2'
+            'item3 item4'
+            'item5 item6';
+        grid-template-columns: repeat(2,1fr);
+    }
 }
 
 // Tablets & Small Laptops
@@ -38,12 +46,7 @@
     main {
         align-items: center;
         text-align: center;
-        padding: 2rem;
-
-        .lg-heading {
-            line-height: 1;
-            margin-bottom: 1rem;
-        }
+        margin: 2rem;
     }
 
     ul.menu-nav {
@@ -79,15 +82,27 @@
         visibility: visible;
     }
 
-    main#tickets{
+    main#tickets {
         padding: 2rem 2rem;
         padding-top: 6rem;
     }
 
-    .tickets-info{
+    .tickets-info {
         grid-template-areas:
             'timetable'
             'prices';
+        grid-template-columns: 1fr;
+    }
+
+    .faqs {
+        padding: 0;
+        grid-template-areas:
+            'item1'
+            'item2'
+            'item3'
+            'item4'
+            'item5'
+            'item6';
         grid-template-columns: 1fr;
     }
 }
@@ -99,9 +114,13 @@
         padding: 0.5rem;
     }
 
-    main#tickets{
+    main#tickets {
         padding: 0;
 
+    }
+
+    main#faqs-page  {
+        padding: 0;
     }
 
     ul.menu-nav {
