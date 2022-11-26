@@ -41,7 +41,7 @@ a {
 
 header {
     position: fixed;
-    z-index: 2;
+    z-index: 1;
     width: 100%;
 }
 
@@ -63,26 +63,14 @@ header {
     }
 }
 
-.btn-dark {
-    @extend .btn;
-    background: darken($primary-color, 50);
-    color: #fff;
-}
-
-.btn-light {
-    @extend .btn;
-    background: lighten($primary-color, 50);
-    color: #333;
-}
-
-
 // main
 main {
     padding: 4rem;
     //height: 100%;
     min-height: calc(100vh - 60px);
-
+    z-index: -1;
     // Exhibition page
+
     &#exhibition {
         padding: 0;
         background: white;
@@ -92,8 +80,20 @@ main {
         font-weight: 400;
         line-height: 1.8em;
         color: black;
-        z-index: -1;
+
     }
+
+    &#tickets {
+        padding-top: 8rem;
+        background: rgba(darken($secondary-color, 5),$background-opacity);
+        height: 100%;
+        margin-top: 0;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.8em;
+        color: set-text-color($secondary-color);
+    }
+
 }
 
 // Home page
@@ -191,6 +191,61 @@ main {
     }
 }
 
+// Tickets page
+
+.tickets-info {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-areas:
+        'timetable prices';
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
+    background-color: rgba($secondary-color, $background-opacity);
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    
+    h1{
+        background-color: rgba($tertiary-color, $background-opacity);
+        color: set-text-color($tertiary-color);
+    }
+
+    div {
+        margin: auto;
+    }
+
+    table {
+        margin: auto;
+       
+    }
+
+    td {
+        text-align: center;
+        padding: 0.5rem;
+    }
+
+    .prices {
+        grid-area: prices;
+        padding-bottom: 1rem;
+        padding-top: 1rem;
+
+        & .adults {
+            display: inline-block;
+
+        }
+
+        & .children {
+
+            display: inline-block;
+        }
+    }
+
+    .timetable {
+        grid-area: timetable;
+    }
+}
+
+
+//Footer
 
 #main-footer {
     bottom: 0;
