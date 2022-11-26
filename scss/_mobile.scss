@@ -3,6 +3,10 @@
     .menu-btn {
         visibility: hidden;
     }
+
+    main#home {
+        padding-top: 4rem;
+    }
 }
 
 // Desktops & Laptops
@@ -46,7 +50,11 @@
     main {
         align-items: center;
         text-align: center;
-        margin: 2rem;
+    }
+
+    main#tickets {
+        padding: 2rem 2rem;
+        padding-top: 6rem;
     }
 
     ul.menu-nav {
@@ -82,11 +90,6 @@
         visibility: visible;
     }
 
-    main#tickets {
-        padding: 2rem 2rem;
-        padding-top: 6rem;
-    }
-
     .tickets-info {
         grid-template-areas:
             'timetable'
@@ -95,7 +98,6 @@
     }
 
     .faqs {
-        padding: 0;
         grid-template-areas:
             'item1'
             'item2'
@@ -104,22 +106,30 @@
             'item5'
             'item6';
         grid-template-columns: 1fr;
+
+        & .item {
+            display: block;
+        }
     }
 }
 
 // Smartphones
 @include mediaSm {
 
-    main {
-        padding: 0.5rem;
-    }
-
     main#tickets {
+        margin: 0.5rem;
         padding: 0;
-
+        margin: 0;
     }
 
-    main#faqs-page  {
+    main#home {
+        padding: 0;
+        margin: 0;
+    }
+
+    main#faqs-page {
+        margin: 0.5rem;
+        margin-top: 5rem;
         padding: 0;
     }
 
