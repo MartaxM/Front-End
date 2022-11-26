@@ -1,0 +1,40 @@
+// The navigation bar
+.navbar {
+    display: flex;
+    overflow: hidden;
+    background-color: $primary-color;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+
+    &-title {
+        text-decoration: none;
+        margin-top: auto;
+        margin-left: 2rem;
+        margin-right: auto;
+        margin-bottom: auto;
+        text-align: left;
+        font-size: 40px;
+        font-weight: 400;
+    }
+
+    &-link {
+        float: left;
+        display: block;
+        color: set-text-color($primary-color);
+        text-align: center;
+        text-decoration: none;
+        font-size: 25px;
+        text-transform: uppercase;
+        padding: 1rem 1rem;
+        font-weight: 300;
+
+        @include easeOut;
+
+        &:hover {
+            background: $quaternary-color;
+            color: set-text-color($quaternary-color);
+        }
+    }
+}

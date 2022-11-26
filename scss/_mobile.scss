@@ -31,7 +31,6 @@
             width: 100%;
         }
     }
-
 }
 
 // Tablets & Small Laptops
@@ -75,6 +74,10 @@
     .navbar-title {
         font-size: 35px;
     }
+
+    .menu-btn {
+        visibility: visible;
+    }
 }
 
 // Smartphones
@@ -101,5 +104,9 @@
 
     .navbar-link {
         visibility: hidden;
+    }
+
+    .menu-btn {
+        visibility: visible;
     }
 }
