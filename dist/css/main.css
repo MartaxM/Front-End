@@ -128,7 +128,7 @@ header {
   width: 100%; }
 
 .text-secondary {
-  color: #07456f; }
+  color: #009f9d; }
 
 main {
   padding: 4rem;
@@ -140,34 +140,19 @@ main {
       main .icons a:hover {
         color: #07456f;
         transition: all 0.5s ease-out; }
-  main#home {
-    overflow: hidden; }
-    main#home h1 {
-      margin-top: 20vh; }
 
-.about-info {
-  display: grid;
-  grid-gap: 30px;
-  grid-template-areas: 'bioimage bio bio' 'job1 job2 job3';
-  grid-template-columns: repeat(3, 1fr); }
-  .about-info .bio-image {
-    grid-area: bioimage;
-    margin: auto;
-    border-radius: 50%;
-    border: #07456f 3px solid; }
-  .about-info .bio {
-    grid-area: bio;
-    font-size: 1.5rem; }
-  .about-info .job-1 {
-    grid-area: job1; }
-  .about-info .job-1 {
-    grid-area: job2; }
-  .about-info .job-1 {
-    grid-area: job3; }
-  .about-info .job {
+.home-info {
+  display: flex;
+  flex-wrap: wrap; }
+  .home-info .img {
+    width: 30%; }
+  .home-info .text {
+    width: 70%;
     background: #140e52;
     padding: 0.5rem;
     border-bottom: #07456f 5px solid; }
+  .home-info .text-4 {
+    width: 100%; }
 
 .projects {
   display: grid;
@@ -271,12 +256,17 @@ main {
     ul.menu-nav.show {
       transform: translate3d(0, 0, 0); }
   .menu-btn {
-    visibility: hidden; } }
+    visibility: hidden; }
+  .home-info .img {
+    width: 100%; }
+  .home-info .text {
+    width: 100%; } }
 
 @media screen and (max-width: 768px) {
   main {
     align-items: center;
-    text-align: center; }
+    text-align: center;
+    padding: 2rem; }
     main .lg-heading {
       line-height: 1;
       margin-bottom: 1rem; }
@@ -287,12 +277,18 @@ main {
     transform: translate3d(0, -100%, 0); }
     ul.menu-nav.show {
       transform: translate3d(0, 0, 0); }
+  .home-info .img {
+    width: 100%; }
+  .home-info .text {
+    width: 100%; }
   .navbar-link {
     visibility: hidden; }
   .navbar-title {
     font-size: 35px; } }
 
 @media screen and (max-width: 500px) {
+  main {
+    padding: 0.5rem; }
   main#home h1 {
     margin-top: 10vh; }
   ul.menu-nav {

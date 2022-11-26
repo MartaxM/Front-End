@@ -45,7 +45,7 @@ header {
 }
 
 .text-secondary {
-    color: $secondary-color;
+    color: $tertiary-color;
 }
 
 main {
@@ -66,51 +66,26 @@ main {
         }
     }
 
-    &#home {
-        overflow: hidden;
-
-        h1 {
-            margin-top: 20vh;
-        }
-    }
+    //&#home {}
 }
 
-.about-info {
-    display: grid;
-    grid-gap: 30px;
-    grid-template-areas:
-        'bioimage bio bio'
-        'job1 job2 job3';
-    grid-template-columns: repeat(3, 1fr);
+.home-info {
+    display: flex;
+    flex-wrap: wrap;
 
-    .bio-image {
-        grid-area: bioimage;
-        margin: auto;
-        border-radius: 50%;
-        border: $secondary-color 3px solid;
+    .img{
+        width: 30%;
     }
 
-    .bio {
-        grid-area: bio;
-        font-size: 1.5rem;
-    }
-
-    .job-1 {
-        grid-area: job1;
-    }
-
-    .job-1 {
-        grid-area: job2;
-    }
-
-    .job-1 {
-        grid-area: job3;
-    }
-
-    .job {
+    .text {
+        width: 70%;
         background: lighten($primary-color, 5);
         padding: 0.5rem;
         border-bottom: $secondary-color 5px solid;
+    }
+
+    .text-4 {
+        width: 100%;
     }
 }
 
