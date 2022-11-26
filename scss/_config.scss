@@ -1,0 +1,73 @@
+// Colors go from darkest to lightest
+$primary-color: #0f0a3c;
+$secondary-color: #07456f;
+$tertiary-color: #009f9d;
+$quaternary-color: #cdffeb;
+$show-home-image: true;
+$home-image: url(../img/aquarium-bg.jpg);
+$background-opacity: 0.8;
+
+// Setting background
+
+@mixin background {
+    @if $show-home-image {
+        &#bg-img {
+            background: $home-image;
+            background-attachment: fixed;
+            background-size: cover;
+
+            &:after{
+                content:'';
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+                background-color: rgba(rgb(92, 112, 202), $background-opacity);
+            }
+        }
+    }
+}
+
+// easeOut
+
+@mixin easeOut {
+    transition: all 0.5s ease-out;
+}
+
+// Set Text Color
+
+@function set-text-color($color){
+    @if (lightness($color) > 40){
+        @return #000;
+    }@else{
+        @return white;
+    }
+}
+
+// Media Query Mixins
+
+@mixin mediaSm {
+    @media screen and (max-width:500px) {
+        @content;
+    }
+}
+
+@mixin mediaMd {
+    @media screen and (max-width:768px) {
+        @content;
+    }
+}
+
+@mixin mediaLg {
+    @media screen and (min-width:769px) and (max-width:1170px) {
+        @content;
+    }
+}
+
+@mixin mediaXl {
+    @media screen and (min-width:1171px){
+        @content;
+    }
+}
